@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="content">
+	<div class="container">
+
+		<div class="right" style="border-left: 1px solid lightgray; padding-left: 20px;">
+			{% include _sidebar_surrounding_events.html %}
+		</div>
+
+		<div>
+			{% assign pageDateString = page.date | date: '%Y-%m-%d' %}
+			{% assign siteTimeString = site.time | date: '%Y-%m-%d' %}
+
+			{% if pageDateString < siteTimeString %}
+			<h1>Rückblick {{ page.date | date: "%d.%m.%Y" }} <span class="loud">- {{ page.title }}</span></h1>
+			{% else %}
+			<h1>{{ page.date | date: "%d.%m.%Y" }} <span class="loud">- {{ page.title }}</span></h1>
+			{% endif %}
+
+			{{ content }}
+		</div>
+
+		{% if page.previous %}
+		<div class="prev">
+			<a href="{{ page.previous.url }}" title="{{ page.previous.title }}">&lt;</a>
+		</div>
+		{% endif %}
+		{% if page.next %}
+		<div class="next">
+			<a href="{{ page.next.url }}" title="{{ page.next.title }}">&gt;</a>
+		</div>
+		{% endif %}
+	</div>
+</div>
