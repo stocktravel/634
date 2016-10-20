@@ -2,7 +2,7 @@ AuthName "Se requiere contraseña"
 
 AuthType Basic
 
-AuthUserFile /media/.htpasswd
+AuthUserFile ../../ruta634/media/.htpasswd
 
 AuthGroupFile /dev/null
 
