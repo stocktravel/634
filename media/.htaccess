@@ -1,0 +1,9 @@
+AuthName "Restricted Area"
+
+AuthType Basic
+
+AuthUserFile /media/.htpasswd
+
+AuthGroupFile /dev/null
+
+require valid-user
