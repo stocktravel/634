@@ -1,4 +1,4 @@
-AuthName "Restricted Area"
+AuthName "Se requiere contraseña"
 
 AuthType Basic
 
