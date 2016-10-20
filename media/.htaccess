@@ -1,9 +1,0 @@
-AuthName "Se requiere contraseña"
-
-AuthType Basic
-
-AuthUserFile .htpasswd
-
-AuthGroupFile /dev/null
-
-require valid-user
